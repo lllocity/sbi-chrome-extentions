@@ -3,6 +3,11 @@
   "name": "SBI証券 ウェブ拡張ツール",
   "version": "1.0.0",
   "description": "SBI証券のウェブサイトにさまざまな便利機能を追加するChrome拡張です",
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://site.sbisec.co.jp/*"],

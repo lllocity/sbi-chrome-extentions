@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "SBI証券 ウェブ拡張ツール",
+  "version": "1.0.0",
+  "description": "SBI証券のウェブサイトにさまざまな便利機能を追加するChrome拡張です",
+  "content_scripts": [
+    {
+      "matches": ["https://site.sbisec.co.jp/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

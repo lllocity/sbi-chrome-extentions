@@ -88,9 +88,7 @@ function createShortcutButton(label, onClick) {
   return wrapper;
 }
 
-function initDateShortcuts(pathGuard) {
-  if (!window.location.pathname.includes(pathGuard)) return;
-
+function initDateShortcuts() {
   const thisYearCheckbox = document.querySelector('#this_year');
   if (!thisYearCheckbox) return;
 
@@ -126,19 +124,10 @@ function initDateShortcuts(pathGuard) {
   });
 }
 
-function initProfitsDateShortcuts() {
-  initDateShortcuts('/profits');
-}
-
-function initDividendsDateShortcuts() {
-  initDateShortcuts('/dividends');
-}
-
 // ---- エントリーポイント ----
 
 function initFeatures() {
-  initProfitsDateShortcuts();
-  initDividendsDateShortcuts();
+  initDateShortcuts();
 }
 
 // Reactがマウントした後にDOMが構築されるため、MutationObserverで待機する
